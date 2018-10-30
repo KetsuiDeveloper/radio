@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: rgba(0, 0, 0, 0) linear-gradient(rgb(241, 251, 249) 0%, rgb(159, 198, 207) 100%) no-repeat scroll 100% 100%;
+    background-image: url('../images/visual/beach.jpeg');
+    background-size: cover; 
+}
+.container-down{
+    margin-top: 20px;
+}
+marquee{
+    font-size: 30px;
+    color: rgba(64,64,64,0.9);
+}
+ul{
+    list-style: none;
+}
+.list{
+    border-radius: 3px;
+    box-shadow: 0 3px 6px 0 rgba(0,39,25,.3);
+    border: 1px solid lightgray;
+}
+.list li{
+    cursor: pointer;
+    padding: 5px;
+    transition: .2s ease;
+    border-bottom: 1px solid transparent;
+    background-color: rgba(221, 218, 218, 0.8);
+}
+.list li:nth-child(odd){
+    background-color: rgba(239, 238, 238, 0.8);
+}
+.list li:hover{
+    padding-left: 15px;
+}
+.list .song-active{
+    background-image: linear-gradient(#d6dee4, #b4c0c8) !important;
+    border-bottom: 1px solid #0d4081;
+    font-weight: bold;
+    padding-left: 15px !important;
+}
+.song-active .song-badge{
+    border-radius: 10px;
+    background-image: linear-gradient(#128cb4, #0b6393);
+}
+
+/* controllers */
+
+.controllers{
+    background-image: linear-gradient(#fffc, #dadadacc);
+    color: black;
+    margin: 10px 0;
+    border: 1px solid rgba(64,64,64,0.8);
+    box-shadow: 2px 2px 5px #9c9c9c99;
+    padding: 10px;
+}
+.controller{
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #76afde;
+    background-size: contain;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+audio{
+    display: block;
+    width: 100%;
+    border-radius: 35px;
+    background-color: white;
+    box-shadow: 5px 5px 14px #363636b3;
+}
+.full-shadow{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(white, #b7b7b7, #3c3c3c);
+    box-shadow: 0 3px 6px 0 rgba(0,39,25,.3);
+    transition: .1s ease;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.song-picture-preview{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: grey;
+    background-size: cover;
+    background-position: center center;
+    opacity: .7;
+}
+.full-shadow:hover{
+    transform: scale(1.05);
+}
+.song-badge{
+    transition: .3s ease;
+    display: inline-block;
+    padding: 5px;
+    background-image: linear-gradient(#15bef5, #0390dd);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-shadow: 0px 0px 2px black;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 1px 1px rgba(0,0,0,.16);
+}
+.flip{
+    animation-name: flip;
+    animation-duration: .3s;
+}
+
+@keyframes flip{
+    from {transform: rotateY(180deg);}
+    to {transform: rotateY(360deg);}
+}
